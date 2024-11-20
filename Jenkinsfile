@@ -36,7 +36,9 @@ pipeline {
                 script {
                     // Docker 컨테이너 내부에서 테스트 실행
                     app.inside {
-                        sh 'npm run start'  //애플리케이션 실행
+			sh 'npm run start & sleep 5'  // 서버 실행
+			sh 'curl -I http://localhost:3000'  // 서버 상태 확인
+			sh 'pkill node'  // 서버 종료
                     }
                 }
             }
