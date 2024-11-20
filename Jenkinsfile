@@ -25,7 +25,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    docker.image("${DOCKER_IMAGE}:${env.BUILD_NUMER}").inside {
+                    docker.image("${DOCKER_IMAGE}:${env.BUILD_NUMBER}").inside {
                         sh 'npm install'
                     }
                 }
