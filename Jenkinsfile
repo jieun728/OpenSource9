@@ -28,7 +28,7 @@ pipeline {
                 script {
                     // Docker 컨테이너 내부에서 테스트 실행
                     app.inside {
-                        sh 'npm run build'  // 빌드 작업 수행
+                        sh 'npm run start'  //애플리케이션 실행
                     }
                 }
             }
