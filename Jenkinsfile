@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "jieunkim728/my-docker-image"  // Docker 이미지 이름
+        DOCKER_IMAGE = "ye0nuk/opensource9"  // Docker 이미지 이름
         DOCKER_CREDENTIALS = "ye0nuk"  // Docker Hub 자격 증명 ID (Jenkins에서 설정)
     }
 
