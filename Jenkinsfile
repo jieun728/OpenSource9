@@ -22,7 +22,15 @@ pipeline {
                 }
             }
         }
-
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    docker.image("${DOCKER_IMAGE}:${env.BUILD_NUMER}").inside {
+                        sh 'npm install'
+                    }
+                }
+            }
+        }
         stage('Test Docker Image') {
             steps {
                 script {

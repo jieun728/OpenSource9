@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Step 4: Install project dependencies
 RUN npm install
+RUN npm install shelljs
 
 # Step 5: Copy all project files into the container
 COPY . .
