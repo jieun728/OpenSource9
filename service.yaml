@@ -1,13 +1,13 @@
+# service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: web-service-lb
+  name: my-app-service
 spec:
   selector:
-    app: web
+    app: my-app
   ports:
-  - name: webserver
-    protocol: TCP
+  - protocol: TCP
     port: 80
+    targetPort: 3000
   type: LoadBalancer
-
